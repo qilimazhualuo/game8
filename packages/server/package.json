@@ -1,0 +1,25 @@
+{
+    "name": "@game8/server",
+    "private": true,
+    "version": "0.0.0",
+    "type": "module",
+    "scripts": {
+        "dev": "bun --watch src/main.js",
+        "start": "bun src/main.js",
+        "start:prod": "bun --env=production src/main.js",
+        "db:push": "drizzle-kit push",
+        "db:studio": "drizzle-kit studio"
+    },
+    "dependencies": {
+        "@sinclair/typebox": "0.34.48",
+        "drizzle-orm": "^0.45.2",
+        "drizzle-typebox": "^0.3.3",
+        "elysia": "^1.4.21",
+        "jsonwebtoken": "^9.0.3",
+        "node-forge": "^1.4.0"
+    },
+    "devDependencies": {
+        "better-sqlite3": "12.10.0",
+        "drizzle-kit": "^0.31.10"
+    }
+}

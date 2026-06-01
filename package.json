@@ -1,0 +1,24 @@
+{
+    "name": "game8",
+    "private": true,
+    "version": "0.0.0",
+    "workspaces": [
+        "packages/*"
+    ],
+    "scripts": {
+        "dev": "bun run --filter '*' dev",
+        "dev:server": "bun run --filter @game8/server dev",
+        "dev:client": "bun run --filter @game8/client dev",
+        "build": "bun run --filter @game8/client build",
+        "start": "bun run --filter @game8/server start",
+        "start:prod": "bun run --filter @game8/server start:prod",
+        "db:push": "bun run --filter @game8/server db:push",
+        "db:studio": "bun run --filter @game8/server db:studio"
+    },
+    "overrides": {
+        "@sinclair/typebox": "0.34.48"
+    },
+    "dependencies": {
+        "unplugin-vue-components": "^32.0.0"
+    }
+}

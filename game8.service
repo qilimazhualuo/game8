@@ -1,0 +1,16 @@
+[Unit]
+Description=Game8 Dev Server
+After=network.target
+
+[Service]
+Type=simple
+User=zb
+Group=zb
+WorkingDirectory=/home/zb/Documents/GitHub/game8
+Environment=PATH=/home/zb/.bun/bin:/usr/local/bin:/usr/bin:/bin
+ExecStart=/home/zb/.bun/bin/bun run --filter '*' dev
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=default.target
